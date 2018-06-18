@@ -5,9 +5,7 @@ C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKillerTest.pdb
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.dll
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.pdb
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.dll.config
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.csprojResolveAssemblyReference.cache
@@ -15,3 +13,5 @@ C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.csproj.CoreCompileInputs.cache
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.dll
 C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.pdb
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.exe
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.exe.config
