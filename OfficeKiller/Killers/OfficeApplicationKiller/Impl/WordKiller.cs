@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,7 +21,7 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
 
         private Application FindRunningWordInstance()
         {
-            return (Application) System.Runtime.InteropServices.Marshal.GetActiveObject("Word.Application");
+            return InstanceUtils.FindRunningInstance<Application>("Word.Application");
         }
 
         private void KillWord(Application runningWordApp)

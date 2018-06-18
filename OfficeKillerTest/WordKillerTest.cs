@@ -46,7 +46,8 @@ namespace OfficeKillerTest
 
         private bool IsWordInstanceRunning()
         {
-            return (Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Word.Application") != null;
+            Application app = InstanceUtils.FindRunningInstance<Application>("Word.Application");
+            return  app != null;
         }
     }
 }
