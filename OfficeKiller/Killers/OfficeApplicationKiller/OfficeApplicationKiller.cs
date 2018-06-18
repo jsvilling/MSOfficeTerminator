@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
-    interface OfficeApplicationKiller
+    public interface OfficeApplicationKiller
     {
         void Kill();
     }

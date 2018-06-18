@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
-    class WordKiller : OfficeApplicationKiller
+    public class WordKiller : OfficeApplicationKiller
     {
         public void Kill()
         {

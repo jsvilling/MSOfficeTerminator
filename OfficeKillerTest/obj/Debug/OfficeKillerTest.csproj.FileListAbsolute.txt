@@ -1,0 +1,17 @@
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKillerTest.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKillerTest.pdb
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.pdb
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\OfficeKiller.dll.config
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.csprojResolveAssemblyReference.cache
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.csproj.ResolveComReference.cache
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.csproj.CoreCompileInputs.cache
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.dll
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Debug\OfficeKillerTest.pdb

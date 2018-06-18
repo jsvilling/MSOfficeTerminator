@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
-    class ExcelKiller : OfficeApplicationKiller
+    public class ExcelKiller : OfficeApplicationKiller
     {
         public void Kill()
         {

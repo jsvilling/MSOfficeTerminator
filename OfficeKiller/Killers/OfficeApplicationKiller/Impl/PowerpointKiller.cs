@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
-    class PowerpointKiller : OfficeApplicationKiller
+    public class PowerpointKiller : OfficeApplicationKiller
     {
         public void Kill()
         {

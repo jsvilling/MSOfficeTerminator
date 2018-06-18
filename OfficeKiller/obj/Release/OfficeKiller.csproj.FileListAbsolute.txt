@@ -1,0 +1,7 @@
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\bin\Release\OfficeKiller.exe.config
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\bin\Release\OfficeKiller.exe
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\bin\Release\OfficeKiller.pdb
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Release\OfficeKiller.csproj.ResolveComReference.cache
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Release\OfficeKiller.csproj.CoreCompileInputs.cache
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Release\OfficeKiller.exe
+C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Release\OfficeKiller.pdb
