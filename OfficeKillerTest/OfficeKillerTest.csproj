@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="IT\AppKillerTest.cs" />
     <Compile Include="IT\ExcelKillerTest.cs" />
+    <Compile Include="IT\PowerpointKillerTest.cs" />
     <Compile Include="IT\WordKillerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,29 +5,17 @@ using Microsoft.Office.Interop.Word;
 using OfficeKillerTest.IT;
 using System.Diagnostics;
 
-namespace OfficeKillerTest
+namespace OfficeKillerTest 
 {
     [TestClass]
-    public class WordKillerTest
+    public class WordKillerTest : AppKillerTest<Application>
     {
-
-        OfficeApplicationKiller<Application> appKiller = new WordKiller();
-
-        [TestMethod]
-        public void TestWordKiller_HappyPath()
+        protected override OfficeApplicationKiller<Application> initAppKiller()
         {
-            // Given
-            LaunchWord();
-
-            // When
-            appKiller.Kill();
-
-            // Then
-            Process[] remainingWordProcesses = Process.GetProcessesByName(appKiller.ProcessName);
-            Assert.AreEqual(0, remainingWordProcesses.Length);
+            return new WordKiller();
         }
 
-        private void LaunchWord()
+        protected override void LaunchApp()
         {
             Application wordApp = new Application();
             wordApp.Application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
