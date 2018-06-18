@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Word;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,26 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
     {
         public void Kill()
         {
+            Application runningWordApp = FindRunningWordInstance();
+            if (runningWordApp != null)
+            {
+                KillWord(runningWordApp);
+            }
+        }
 
+        private Application FindRunningWordInstance()
+        {
+            return (Application) System.Runtime.InteropServices.Marshal.GetActiveObject("Word.Application");
+        }
+
+        private void KillWord(Application runningWordApp)
+        {
+            foreach (Document wordDoc in runningWordApp.Documents)
+            {
+                wordDoc.Save();
+                wordDoc.Close();
+            }
+            runningWordApp.Quit();
         }
     }
 }
