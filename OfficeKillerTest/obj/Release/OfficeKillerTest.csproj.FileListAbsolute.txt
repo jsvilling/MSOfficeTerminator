@@ -1,3 +1,0 @@
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Release\OfficeKillerTest.csprojResolveAssemblyReference.cache
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Release\OfficeKillerTest.csproj.ResolveComReference.cache
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKillerTest\obj\Release\OfficeKillerTest.csproj.CoreCompileInputs.cache

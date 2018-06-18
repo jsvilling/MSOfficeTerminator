@@ -1,7 +1,0 @@
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\bin\Debug\OfficeKiller.pdb
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Debug\OfficeKiller.csproj.ResolveComReference.cache
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Debug\OfficeKiller.csproj.CoreCompileInputs.cache
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Debug\OfficeKiller.pdb
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\bin\Debug\OfficeKiller.exe.config
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\bin\Debug\OfficeKiller.exe
-C:\Users\dmszivi.SRKDOMAIN\source\repos\OfficeKiller\OfficeKiller\obj\Debug\OfficeKiller.exe

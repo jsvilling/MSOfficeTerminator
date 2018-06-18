@@ -48,6 +48,7 @@
     <Compile Include="Killers\OfficeApplicationKiller\Impl\ExcelKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\PowerpointKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\WordKiller.cs" />
+    <Compile Include="Killers\OfficeApplicationKiller\InstanceUtils.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\OfficeApplicationKiller.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
