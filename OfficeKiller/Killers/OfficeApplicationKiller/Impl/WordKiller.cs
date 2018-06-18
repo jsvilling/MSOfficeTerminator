@@ -8,23 +8,13 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
-    public class WordKiller : OfficeApplicationKiller
+    public class WordKiller : OfficeApplicationKiller<Application>
     {
-        public void Kill()
-        {
-            Application runningWordApp = FindRunningWordInstance();
-            if (runningWordApp != null)
-            {
-                KillWord(runningWordApp);
-            }
-        }
+        public override string InstanceName => "Word.Application";
 
-        private Application FindRunningWordInstance()
-        {
-            return InstanceUtils.FindRunningInstance<Application>("Word.Application");
-        }
+        public override string ProcessName => "winword.exe";
 
-        private void KillWord(Application runningWordApp)
+        protected override void SaveAndQuit(Application runningWordApp)
         {
             foreach (Document wordDoc in runningWordApp.Documents)
             {

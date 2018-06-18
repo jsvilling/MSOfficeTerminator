@@ -2,6 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OfficeKiller.Killers.OfficeApplicationKiller;
 using Microsoft.Office.Interop.Word;
+using OfficeKillerTest.IT;
+using System.Diagnostics;
 
 namespace OfficeKillerTest
 {
@@ -9,37 +11,20 @@ namespace OfficeKillerTest
     public class WordKillerTest
     {
 
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            if (IsWordInstanceRunning())
-            {
-                Console.Write("Please quit all Office Applications before running any tests");
-                throw new SystemException("unexpected office app running");
-            }
-        }
-
-        [TestCleanup]
-        public void TestCleanUp()
-        {
-            if (IsWordInstanceRunning())
-            {
-                InstanceUtils.FindRunningInstance<Application>("Word.Application").Quit();
-            }
-        }
+        OfficeApplicationKiller<Application> appKiller = new WordKiller();
 
         [TestMethod]
         public void TestWordKiller_HappyPath()
         {
             // Given
             LaunchWord();
-            OfficeApplicationKiller appKiller = new WordKiller();
 
             // When
             appKiller.Kill();
 
             // Then
-            Assert.IsFalse(IsWordInstanceRunning());
+            Process[] remainingWordProcesses = Process.GetProcessesByName(appKiller.ProcessName);
+            Assert.AreEqual(0, remainingWordProcesses.Length);
         }
 
         private void LaunchWord()
@@ -49,12 +34,6 @@ namespace OfficeKillerTest
             wordApp.Application.ScreenUpdating = false;
             wordApp.Application.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable;
             wordApp.Application.Visible = false;
-        }
-
-        private bool IsWordInstanceRunning()
-        {
-            Application app = InstanceUtils.FindRunningInstance<Application>("Word.Application");
-            return  app != null;
         }
     }
 }

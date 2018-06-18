@@ -11,15 +11,7 @@ namespace OfficeKiller
     {
         static void Main(string[] args)
         {
-            HashSet<OfficeApplicationKiller> appKillers = new HashSet<OfficeApplicationKiller>();
-            appKillers.Add(new ExcelKiller());
-            appKillers.Add(new WordKiller());
-            appKillers.Add(new PowerpointKiller());
-            foreach (OfficeApplicationKiller appKiller in appKillers)
-            {
-                appKiller.Kill();
-                // TODO: error handling
-            }
+            OfficeApplicationKiller<Microsoft.Office.Interop.Word.Application> a = new WordKiller();
         }
     }
 }
