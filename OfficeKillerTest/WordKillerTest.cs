@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OfficeKiller.Killers.OfficeApplicationKiller;
+using Microsoft.Office.Interop.Word;
 
 namespace OfficeKillerTest
 {
@@ -25,13 +26,27 @@ namespace OfficeKillerTest
         {
             // Given
             // spawn word process
-            // init wordkiller
+            OfficeApplicationKiller appKiller = new WordKiller();
 
             // When
-            // invoke wordkiller.Kill()
+            appKiller.Kill();
 
             // Then
-            // assert that no more word processes are running
+            Assert.IsFalse(IsWordInstanceRunning());
+        }
+
+        private void LaunchWord()
+        {
+            Application wordApp = new Application();
+            wordApp.Application.DisplayAlerts = WdAlertLevel.wdAlertsNone;
+            wordApp.Application.ScreenUpdating = false;
+            wordApp.Application.AutomationSecurity = Microsoft.Office.Core.MsoAutomationSecurity.msoAutomationSecurityForceDisable;
+            wordApp.Application.Visible = false;
+        }
+
+        private bool IsWordInstanceRunning()
+        {
+            return (Application)System.Runtime.InteropServices.Marshal.GetActiveObject("Word.Application") != null;
         }
     }
 }
