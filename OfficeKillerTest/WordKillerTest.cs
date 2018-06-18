@@ -12,20 +12,27 @@ namespace OfficeKillerTest
         [TestInitialize]
         public void TestInitialize()
         {
-            // assert that no word processes are running
+            if (IsWordInstanceRunning())
+            {
+                Console.Write("Please quit all Office Applications before running any tests");
+                throw new SystemException("unexpected office app running");
+            }
         }
 
         [TestCleanup]
         public void TestCleanUp()
         {
-            // clean up any remaining word processes
+            if (IsWordInstanceRunning())
+            {
+                InstanceUtils.FindRunningInstance<Application>("Word.Application").Quit();
+            }
         }
 
         [TestMethod]
         public void TestWordKiller_HappyPath()
         {
             // Given
-            // spawn word process
+            LaunchWord();
             OfficeApplicationKiller appKiller = new WordKiller();
 
             // When
