@@ -9,9 +9,9 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
     public class PowerpointKiller : OfficeApplicationKiller<Application>
     {
-        public override string InstanceName => "Powerpoint.Application";
+        public override string InstanceName => "PowerPoint.Application";
 
-        public override string ProcessName => "powerpoint.exe";
+        public override string ProcessName => "POWERPNT";
 
         protected override void SaveAndQuit(Application appInstance)
         {

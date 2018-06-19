@@ -21,8 +21,8 @@ namespace OfficeKillerTest.IT
             appKiller.Kill();
 
             // Then
-            Process[] remainingWordProcesses = Process.GetProcessesByName(appKiller.ProcessName);
-            Assert.AreEqual(0, remainingWordProcesses.Length);
+            Process[] remainingAppProcesses = Process.GetProcessesByName(appKiller.ProcessName);
+            Assert.AreEqual(0, remainingAppProcesses.Length);
         }
 
         [TestMethod]

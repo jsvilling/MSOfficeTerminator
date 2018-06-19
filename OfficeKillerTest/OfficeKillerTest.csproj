@@ -48,10 +48,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IT\AppKillerTest.cs" />
-    <Compile Include="IT\ExcelKillerTest.cs" />
-    <Compile Include="IT\PowerpointKillerTest.cs" />
-    <Compile Include="IT\WordKillerTest.cs" />
+    <Compile Include="IT\AppKillers\AppKillerTest.cs" />
+    <Compile Include="IT\AppKillers\ExcelKillerTest.cs" />
+    <Compile Include="IT\AppKillers\PowerpointKillerTest.cs" />
+    <Compile Include="IT\AppKillers\WordKillerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +110,9 @@
       <Name>OfficeKiller</Name>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IT\Program\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

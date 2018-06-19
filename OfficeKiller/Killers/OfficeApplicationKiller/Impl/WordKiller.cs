@@ -12,7 +12,7 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
     {
         public override string InstanceName => "Word.Application";
 
-        public override string ProcessName => "winword.exe";
+        public override string ProcessName => "WINWORD";
 
         protected override void SaveAndQuit(Application runningWordApp)
         {

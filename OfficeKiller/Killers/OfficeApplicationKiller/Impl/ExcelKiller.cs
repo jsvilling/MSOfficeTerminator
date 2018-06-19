@@ -9,9 +9,9 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
     public class ExcelKiller : OfficeApplicationKiller<Application>
     {
-        public override string ProcessName => "Excel.Application";
+        public override string ProcessName => "EXCEL";
 
-        public override string InstanceName => "Excel";
+        public override string InstanceName => "Excel.Application";
 
         protected override void SaveAndQuit(Application appInstance)
         {

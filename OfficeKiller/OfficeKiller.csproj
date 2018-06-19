@@ -48,7 +48,11 @@
     <Compile Include="Killers\OfficeApplicationKiller\Impl\ExcelKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\PowerpointKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\WordKiller.cs" />
+    <Compile Include="Killers\OfficeApplicationKiller\IOfficeApplicationKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\OfficeApplicationKiller.cs" />
+    <Compile Include="Killers\ProcessKiller\ManagementObject.cs" />
+    <Compile Include="Killers\ProcessKiller\ManagementObjectCollection.cs" />
+    <Compile Include="Killers\ProcessKiller\ManagementObjectSearcher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

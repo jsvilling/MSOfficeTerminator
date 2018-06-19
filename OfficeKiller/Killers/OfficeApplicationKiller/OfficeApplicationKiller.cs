@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers.OfficeApplicationKiller
 {
-    public abstract class OfficeApplicationKiller<A>
+    public abstract class OfficeApplicationKiller<A> : IOfficeApplicationKiller
     {
         public abstract string InstanceName
         {
@@ -49,11 +49,7 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
 
         private void KillRemainingProcesses()
         {
-            Process[] remainingProcesses = Process.GetProcessesByName(ProcessName);
-            foreach (Process process in remainingProcesses)
-            {
-                process.Kill();
-            }
+            Process.GetProcessesByName(ProcessName).ToList().ForEach(p => p.Kill());
         }
 
         protected abstract void SaveAndQuit(A appInstance);
