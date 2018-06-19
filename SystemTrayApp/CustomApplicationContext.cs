@@ -37,7 +37,9 @@ namespace SystemTrayApp
                 Text = DefaultTooltip,
                 Visible = true
             };
-            notifyIcon.ContextMenuStrip.Items.Add(ToolStripMenuItemWithHandler("terminate all office programs", OnTerminateAllOfficeApps));
+            notifyIcon.ContextMenuStrip.Items.Add(ToolStripMenuItemWithHandler("Terminate all office programs", OnTerminateAllOfficeApps));
+            notifyIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
+            notifyIcon.ContextMenuStrip.Items.Add(ToolStripMenuItemWithHandler("Exit", OnExit));
             notifyIcon.DoubleClick += OnTerminateAllOfficeApps;
         }
 
@@ -63,6 +65,11 @@ namespace SystemTrayApp
         private void OnTerminateAllOfficeApps(object sender, EventArgs e)
         {
             handler.KillAll();
+        }
+
+        private void OnExit(object sender, EventArgs e)
+        {
+            this.ExitThread();
         }
     }
 }
