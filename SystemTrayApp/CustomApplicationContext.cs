@@ -18,6 +18,13 @@ namespace SystemTrayApp
         {
             InitializeContext();
             handler = new OfficeAppHandler();
+            handler.ExecutionDone += OnExecutionDone;
+        }
+
+        public void OnExecutionDone(string message)
+        {
+            notifyIcon.BalloonTipText = message;
+            notifyIcon.ShowBalloonTip(2000);
         }
 
         private void InitializeContext()
