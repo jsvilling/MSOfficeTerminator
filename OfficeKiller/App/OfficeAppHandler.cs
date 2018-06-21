@@ -1,4 +1,5 @@
-﻿using OfficeKiller.Killers.OfficeApplicationKiller;
+﻿using OfficeKiller.App;
+using OfficeKiller.Killers.OfficeApplicationKiller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace OfficeKiller.Killers
 {
     public class OfficeAppHandler
     {
-
         public delegate void ExecutionDoneHandler(string message);
         public event ExecutionDoneHandler ExecutionDone;
         string message = "";
@@ -35,6 +35,11 @@ namespace OfficeKiller.Killers
                 ExecutionDone(message);
                 message = "";
             }
+        }
+
+        public void ChangeConfig()
+        {
+
         }
     }
 }
