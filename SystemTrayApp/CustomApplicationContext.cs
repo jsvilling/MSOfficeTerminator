@@ -19,7 +19,7 @@ namespace SystemTrayApp
 
         public CustomApplicationContext(IOfficeKillerApp handler)
         {
-            this.handler = new OfficeKiller.Killers.OfficeKillerApp();
+            this.handler = new OfficeKillerApp();
             handler.ExecutionDone += OnExecutionDone;
             OnConfigChanged += handler.ChangeConfig;
             InitializeContext();
@@ -71,15 +71,6 @@ namespace SystemTrayApp
                 item.Click += eventHandler;
             }
             return item;
-        }
-
-        private void notifyIcon_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                MethodInfo mi = typeof(NotifyIcon).GetMethod("ShowContextMenu", BindingFlags.Instance | BindingFlags.NonPublic);
-                mi.Invoke(notifyIcon, null);
-            }
         }
 
         // Event Handlers
