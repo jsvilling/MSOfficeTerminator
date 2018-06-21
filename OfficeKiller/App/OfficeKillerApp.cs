@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers
 {
-    public class OfficeKiller : IOfficeKiller
+    public class OfficeKillerApp : IOfficeKillerApp
     {
         public event ExecutionDoneHandler ExecutionDone;
 

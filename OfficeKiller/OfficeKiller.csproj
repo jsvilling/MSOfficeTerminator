@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\IOfficeKiller.cs" />
-    <Compile Include="App\OfficeKiller.cs" />
+    <Compile Include="App\IOfficeKillerApp.cs" />
+    <Compile Include="App\OfficeKillerApp.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\ExcelKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\PowerpointKiller.cs" />
     <Compile Include="Killers\OfficeApplicationKiller\Impl\WordKiller.cs" />

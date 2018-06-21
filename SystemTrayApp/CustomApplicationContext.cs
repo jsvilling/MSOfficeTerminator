@@ -13,14 +13,14 @@ namespace SystemTrayApp
         public delegate void OnConfigChangedHandler(string itemName, bool itemValue);
         public event OnConfigChangedHandler OnConfigChanged;
 
-        private IOfficeKiller handler;
+        private IOfficeKillerApp handler;
         private System.ComponentModel.IContainer components;
         private NotifyIcon notifyIcon;
         private static readonly string DefaultTooltip = "";
 
-        public CustomApplicationContext()
+        public CustomApplicationContext(IOfficeKillerApp handler)
         {
-            handler = new OfficeKiller.Killers.OfficeKiller();
+            this.handler = new OfficeKiller.Killers.OfficeKillerApp();
             handler.ExecutionDone += OnExecutionDone;
             OnConfigChanged += handler.ChangeConfig;
             InitializeContext();

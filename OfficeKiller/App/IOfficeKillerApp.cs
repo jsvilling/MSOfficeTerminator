@@ -8,7 +8,7 @@ namespace OfficeKiller.App
 {
     public delegate void ExecutionDoneHandler(string message);
 
-    public interface IOfficeKiller
+    public interface IOfficeKillerApp
     {
         event ExecutionDoneHandler ExecutionDone;
 
