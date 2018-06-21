@@ -14,7 +14,6 @@ namespace OfficeKiller.Killers
 
         public void KillAll()
         {
-            string message = "";
             try
             {
                 var interfaceType = typeof(IOfficeApplicationKiller);
@@ -23,16 +22,11 @@ namespace OfficeKiller.Killers
                     .Where(x => interfaceType.IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
                     .Select(x => Activator.CreateInstance(x)).ToList()
                     .ForEach(o => o.GetType().GetMethod("Kill").Invoke(o, null));
-                message = "All office applications were terminated.";
+                ExecutionDone("All office applications were terminated.");
             }
             catch (Exception e)
             {
-                message = "An error occured: " + e.ToString();
-            }
-            finally
-            {
-                ExecutionDone(message);
-                message = "";
+                ExecutionDone("An error occured: " + e.ToString());
             }
         }
 
