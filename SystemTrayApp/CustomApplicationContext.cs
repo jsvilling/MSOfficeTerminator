@@ -13,15 +13,15 @@ namespace SystemTrayApp
         public delegate void OnConfigChangedHandler(string itemName, bool itemValue);
         public event OnConfigChangedHandler OnConfigChanged;
 
-        private IOfficeTerminator handler;
+        private IOfficeTerminator officeTerminator;
         private System.ComponentModel.IContainer components;
         private NotifyIcon notifyIcon;
 
-        public CustomApplicationContext(IOfficeTerminator handler)
+        public CustomApplicationContext(IOfficeTerminator officeTerminator)
         {
-            this.handler = handler;
-            handler.ExecutionDone += OnExecutionDone;
-            OnConfigChanged += handler.ChangeConfig;
+            this.officeTerminator = officeTerminator;
+            officeTerminator.ExecutionDone += OnExecutionDone;
+            OnConfigChanged += officeTerminator.ChangeConfig;
             InitializeContext();
         }
 
@@ -52,7 +52,7 @@ namespace SystemTrayApp
         private ToolStripMenuItem SetupConfigSubMenu()
         {
             ToolStripMenuItem menuItem = new ToolStripMenuItem("Configuration");
-            foreach (KeyValuePair<string, bool> configItem in handler.GetConfig())
+            foreach (KeyValuePair<string, bool> configItem in officeTerminator.GetConfig())
             {
                 ToolStripMenuItem item = ToolStripMenuItemWithHandler(configItem.Key, OnClickConfigItem);
                 item.Name = configItem.Key;
@@ -89,7 +89,7 @@ namespace SystemTrayApp
 
         private void OnTerminateAllOfficeApps(object sender, EventArgs e)
         {
-            handler.TerminateAll();
+            officeTerminator.TerminateAll();
         }
 
         private void OnExit(object sender, EventArgs e)
