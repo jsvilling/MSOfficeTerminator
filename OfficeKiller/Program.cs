@@ -13,7 +13,7 @@ namespace OfficeKiller
     {
         static void Main(string[] args)
         {
-            new OfficeAppHandler().KillAll();
+            new Killers.OfficeKiller().KillAll();
         }
     }
 }

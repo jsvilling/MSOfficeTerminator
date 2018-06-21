@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using OfficeKiller.Killers;
 using System.Collections.Generic;
+using OfficeKiller.App;
 
 namespace SystemTrayApp
 {
@@ -12,14 +13,14 @@ namespace SystemTrayApp
         public delegate void OnConfigChangedHandler(string itemName, bool itemValue);
         public event OnConfigChangedHandler OnConfigChanged;
 
-        private OfficeAppHandler handler;
+        private IOfficeKiller handler;
         private System.ComponentModel.IContainer components;
         private NotifyIcon notifyIcon;
         private static readonly string DefaultTooltip = "";
 
         public CustomApplicationContext()
         {
-            handler = new OfficeAppHandler();
+            handler = new OfficeKiller.Killers.OfficeKiller();
             handler.ExecutionDone += OnExecutionDone;
             OnConfigChanged += handler.ChangeConfig;
             InitializeContext();

@@ -1,4 +1,5 @@
-﻿using OfficeKiller.Killers.OfficeApplicationKiller;
+﻿using OfficeKiller.App;
+using OfficeKiller.Killers.OfficeApplicationKiller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace OfficeKiller.Killers
 {
-    public class OfficeAppHandler
+    public class OfficeKiller : IOfficeKiller
     {
-        public delegate void ExecutionDoneHandler(string message);
         public event ExecutionDoneHandler ExecutionDone;
 
         public void KillAll()
