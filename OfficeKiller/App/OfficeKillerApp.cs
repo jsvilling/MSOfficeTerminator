@@ -16,6 +16,7 @@ namespace OfficeKiller.Killers
         {
             try
             {
+                Properties.Settings.Default.Reload();
                 var interfaceType = typeof(IOfficeApplicationKiller);
                 AppDomain.CurrentDomain.GetAssemblies()
                     .SelectMany(x => x.GetTypes())
