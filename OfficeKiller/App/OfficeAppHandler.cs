@@ -1,5 +1,4 @@
-﻿using OfficeKiller.App;
-using OfficeKiller.Killers.OfficeApplicationKiller;
+﻿using OfficeKiller.Killers.OfficeApplicationKiller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +11,10 @@ namespace OfficeKiller.Killers
     {
         public delegate void ExecutionDoneHandler(string message);
         public event ExecutionDoneHandler ExecutionDone;
-        string message = "";
 
         public void KillAll()
         {
+            string message = "";
             try
             {
                 var interfaceType = typeof(IOfficeApplicationKiller);
@@ -37,9 +36,16 @@ namespace OfficeKiller.Killers
             }
         }
 
-        public void ChangeConfig()
+        public void ChangeConfig(string itemName, bool itemValue)
         {
-
+            if (itemName == "save")
+            {
+                Properties.Settings.Default.SaveFiles = itemValue;
+            }
+            else if (itemName == "killProcess")
+            {
+                Properties.Settings.Default.KillProcess = itemValue;
+            }
         }
     }
 }

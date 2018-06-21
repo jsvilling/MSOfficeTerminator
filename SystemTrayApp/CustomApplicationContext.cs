@@ -21,6 +21,7 @@ namespace SystemTrayApp
             InitializeContext();
             handler = new OfficeAppHandler();
             handler.ExecutionDone += OnExecutionDone;
+            OnConfigChanged += handler.ChangeConfig;
         }
 
         private void InitializeContext()
@@ -51,12 +52,14 @@ namespace SystemTrayApp
         private ToolStripMenuItem SetupConfigSubMenu()
         {
             ToolStripMenuItem menuItem = new ToolStripMenuItem("Configuration");
-            ToolStripMenuItem saveItem = ToolStripMenuItemWithHandler("Save files", OnUpdateConfig);
-            ToolStripMenuItem killRemainingItem = ToolStripMenuItemWithHandler("Kill remaining processes", OnUpdateConfig);
+            ToolStripMenuItem saveItem = ToolStripMenuItemWithHandler("Save files", OnClickConfigItem);
+            ToolStripMenuItem killRemainingItem = ToolStripMenuItemWithHandler("Kill remaining processes", OnClickConfigItem);
+            saveItem.Name = "save";
             saveItem.CheckOnClick = true;
             saveItem.Checked = true;
             killRemainingItem.Checked = true;
             killRemainingItem.CheckOnClick = true;
+            killRemainingItem.Name = "killProcess";
             menuItem.DropDownItems.Add(saveItem);
             menuItem.DropDownItems.Add(killRemainingItem);
             return menuItem;
@@ -90,9 +93,10 @@ namespace SystemTrayApp
             notifyIcon.ShowBalloonTip(2000);
         }
 
-        private void OnUpdateConfig(object sender, EventArgs e)
+        private void OnClickConfigItem(object sender, EventArgs e)
         {
-
+            ToolStripMenuItem item = (ToolStripMenuItem) sender;
+            OnConfigChanged(item.Name, item.Checked);
         }
 
         private void OnTerminateAllOfficeApps(object sender, EventArgs e)
