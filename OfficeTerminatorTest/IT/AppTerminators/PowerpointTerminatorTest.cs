@@ -2,16 +2,16 @@
 using Microsoft.Office.Core;
 using Microsoft.Office.Interop.PowerPoint;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeKiller.Killers.OfficeApplicationKiller;
+using OfficeTerminator.Terminators.OfficeApplicationTerminator;
 
-namespace OfficeKillerTest.IT
+namespace OfficeTerminatorTest.IT
 {
     [TestClass]
-    public class PowerpointKillerTest : AppKillerTest<Application>
+    public class PowerpointTerminatorTest : AppTerminatorTest<Application>
     {
-        protected override OfficeApplicationKiller<Application> initAppKiller()
+        protected override OfficeApplicationTerminator<Application> initAppTerminator()
         {
-            return new PowerpointKiller();
+            return new PowerpointTerminator();
         }
 
         protected override void LaunchApp()

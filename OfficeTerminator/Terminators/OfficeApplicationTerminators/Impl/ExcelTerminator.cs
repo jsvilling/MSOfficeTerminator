@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeKiller.Killers.OfficeApplicationKiller
+namespace OfficeTerminator.Terminators.OfficeApplicationTerminator
 {
-    public class ExcelKiller : OfficeApplicationKiller<Application>
+    public class ExcelTerminator : OfficeApplicationTerminator<Application>
     {
         public override string ProcessName => "EXCEL";
 

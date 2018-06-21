@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OfficeKiller.Properties {
+namespace OfficeTerminator.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -38,12 +38,12 @@ namespace OfficeKiller.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool KillProcess {
+        public bool TerminateProcess {
             get {
-                return ((bool)(this["KillProcess"]));
+                return ((bool)(this["TerminateProcess"]));
             }
             set {
-                this["KillProcess"] = value;
+                this["TerminateProcess"] = value;
             }
         }
     }

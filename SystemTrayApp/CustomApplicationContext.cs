@@ -2,9 +2,9 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
-using OfficeKiller.Killers;
+using OfficeTerminator.Terminators;
 using System.Collections.Generic;
-using OfficeKiller.App;
+using OfficeTerminator.App;
 
 namespace SystemTrayApp
 {
@@ -13,13 +13,13 @@ namespace SystemTrayApp
         public delegate void OnConfigChangedHandler(string itemName, bool itemValue);
         public event OnConfigChangedHandler OnConfigChanged;
 
-        private IOfficeKillerApp handler;
+        private IOfficeTerminator handler;
         private System.ComponentModel.IContainer components;
         private NotifyIcon notifyIcon;
 
-        public CustomApplicationContext(IOfficeKillerApp handler)
+        public CustomApplicationContext(IOfficeTerminator handler)
         {
-            this.handler = new OfficeKillerApp();
+            this.handler = new OfficeTerminator.Terminators.OfficeTerminator();
             handler.ExecutionDone += OnExecutionDone;
             OnConfigChanged += handler.ChangeConfig;
             InitializeContext();
@@ -89,7 +89,7 @@ namespace SystemTrayApp
 
         private void OnTerminateAllOfficeApps(object sender, EventArgs e)
         {
-            handler.KillAll();
+            handler.TerminateAll();
         }
 
         private void OnExit(object sender, EventArgs e)

@@ -2,17 +2,17 @@
 using System.Diagnostics;
 using Microsoft.Office.Interop.Excel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeKiller.Killers.OfficeApplicationKiller;
-using OfficeKillerTest.IT;
+using OfficeTerminator.Terminators.OfficeApplicationTerminator;
+using OfficeTerminatorTest.IT;
 
-namespace OfficeKillerTest
+namespace OfficeTerminatorTest
 {
     [TestClass]
-    public class ExcelKillerTest : AppKillerTest<Application>
+    public class ExcelTerminatorTest : AppTerminatorTest<Application>
     {
-        protected override OfficeApplicationKiller<Application> initAppKiller()
+        protected override OfficeApplicationTerminator<Application> initAppTerminator()
         {
-            return new ExcelKiller();
+            return new ExcelTerminator();
         }
 
         protected override void LaunchApp()

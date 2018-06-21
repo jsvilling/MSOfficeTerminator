@@ -78,9 +78,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OfficeKiller\OfficeKiller.csproj">
+    <ProjectReference Include="..\OfficeTerminator\OfficeTerminator.csproj">
       <Project>{ea5f115a-3b83-4b41-9760-d533795d3dc1}</Project>
-      <Name>OfficeKiller</Name>
+      <Name>OfficeTerminator</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

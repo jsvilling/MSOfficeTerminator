@@ -7,8 +7,8 @@
     <ProjectGuid>{52393DB5-A781-463B-A319-DFAA52A9B668}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OfficeKillerTest</RootNamespace>
-    <AssemblyName>OfficeKillerTest</AssemblyName>
+    <RootNamespace>OfficeTerminateerTest</RootNamespace>
+    <AssemblyName>OfficeTerminateerTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,10 +48,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IT\AppKillers\AppKillerTest.cs" />
-    <Compile Include="IT\AppKillers\ExcelKillerTest.cs" />
-    <Compile Include="IT\AppKillers\PowerpointKillerTest.cs" />
-    <Compile Include="IT\AppKillers\WordKillerTest.cs" />
+    <Compile Include="IT\AppTerminators\AppTerminatorTest.cs" />
+    <Compile Include="IT\AppTerminators\ExcelTerminatorTest.cs" />
+    <Compile Include="IT\AppTerminators\PowerpointTerminatorTest.cs" />
+    <Compile Include="IT\AppTerminators\WordTerminatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,9 +105,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OfficeKiller\OfficeKiller.csproj">
+    <ProjectReference Include="..\OfficeTerminator\OfficeTerminator.csproj">
       <Project>{ea5f115a-3b83-4b41-9760-d533795d3dc1}</Project>
-      <Name>OfficeKiller</Name>
+      <Name>OfficeTerminator</Name>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>

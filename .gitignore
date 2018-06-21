@@ -1,8 +1,8 @@
 .vs
-OfficeKiller/bin
-OfficeKiller/obj
-OfficeKillerTest/bin
-OfficeKillerTest/obj
+OfficeTerminator/bin
+OfficeTerminator/obj
+OfficeTerminatorTest/bin
+OfficeTerminatorTest/obj
 SystemTrayApp/bin
 SystemTrayApp/obj
 packages

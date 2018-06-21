@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeKiller.Killers.OfficeApplicationKiller
+namespace OfficeTerminator.Terminators.OfficeApplicationTerminator
 {
-    public class WordKiller : OfficeApplicationKiller<Application>
+    public class WordTerminator : OfficeApplicationTerminator<Application>
     {
         public override string InstanceName => "Word.Application";
 

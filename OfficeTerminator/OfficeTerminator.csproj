@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EA5F115A-3B83-4B41-9760-D533795D3DC1}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>OfficeKiller</RootNamespace>
-    <AssemblyName>OfficeKiller</AssemblyName>
+    <RootNamespace>OfficeTerminator</RootNamespace>
+    <AssemblyName>OfficeTerminator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,13 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\IOfficeKillerApp.cs" />
-    <Compile Include="App\OfficeKillerApp.cs" />
-    <Compile Include="Killers\OfficeApplicationKiller\Impl\ExcelKiller.cs" />
-    <Compile Include="Killers\OfficeApplicationKiller\Impl\PowerpointKiller.cs" />
-    <Compile Include="Killers\OfficeApplicationKiller\Impl\WordKiller.cs" />
-    <Compile Include="Killers\OfficeApplicationKiller\IOfficeApplicationKiller.cs" />
-    <Compile Include="Killers\OfficeApplicationKiller\OfficeApplicationKiller.cs" />
+    <Compile Include="Terminators\IOfficeTerminator.cs" />
+    <Compile Include="Terminators\OfficeTerminator.cs" />
+    <Compile Include="Terminators\OfficeApplicationTerminators\Impl\ExcelTerminator.cs" />
+    <Compile Include="Terminators\OfficeApplicationTerminators\Impl\PowerpointTerminator.cs" />
+    <Compile Include="Terminators\OfficeApplicationTerminators\Impl\WordTerminator.cs" />
+    <Compile Include="Terminators\OfficeApplicationTerminators\IOfficeApplicationTerminator.cs" />
+    <Compile Include="Terminators\OfficeApplicationTerminators\OfficeApplicationTerminator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -113,6 +113,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

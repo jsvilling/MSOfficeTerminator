@@ -1,18 +1,18 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OfficeKiller.Killers.OfficeApplicationKiller;
+using OfficeTerminator.Terminators.OfficeApplicationTerminator;
 using Microsoft.Office.Interop.Word;
-using OfficeKillerTest.IT;
+using OfficeTerminatorTest.IT;
 using System.Diagnostics;
 
-namespace OfficeKillerTest 
+namespace OfficeTerminatorTest 
 {
     [TestClass]
-    public class WordKillerTest : AppKillerTest<Application>
+    public class WordTerminatorTest : AppTerminatorTest<Application>
     {
-        protected override OfficeApplicationKiller<Application> initAppKiller()
+        protected override OfficeApplicationTerminator<Application> initAppTerminator()
         {
-            return new WordKiller();
+            return new WordTerminator();
         }
 
         protected override void LaunchApp()

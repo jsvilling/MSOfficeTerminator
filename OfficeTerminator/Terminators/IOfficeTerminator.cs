@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeKiller.App
+namespace OfficeTerminator.App
 {
     public delegate void ExecutionDoneHandler(string message);
 
-    public interface IOfficeKillerApp
+    public interface IOfficeTerminator
     {
         event ExecutionDoneHandler ExecutionDone;
 
-        void KillAll();
+        void TerminateAll();
 
         void ChangeConfig(string itemName, bool itemValue);
 

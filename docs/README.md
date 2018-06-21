@@ -1,8 +1,8 @@
-# OfficeKiller
+# OfficeTerminator
 
 ## Overview
 
-OfficeKiller is a small application written in C#. The application can be used to kill all running word, powerpoint and excel processes. I used Costura.Fody to build the application into a standalone .exe file containing all required assemblies.  
+OfficeTerminator is a small application written in C#. The application can be used to kill all running word, powerpoint and excel processes. I used Costura.Fody to build the application into a standalone .exe file containing all required assemblies.  
 
 ## Usage
 

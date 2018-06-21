@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeKiller", "OfficeKiller\OfficeKiller.csproj", "{EA5F115A-3B83-4B41-9760-D533795D3DC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeTerminator", "OfficeTerminator\OfficeTerminator.csproj", "{EA5F115A-3B83-4B41-9760-D533795D3DC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeKillerTest", "OfficeKillerTest\OfficeKillerTest.csproj", "{52393DB5-A781-463B-A319-DFAA52A9B668}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeTerminatorTest", "OfficeTerminatorTest\OfficeTerminatorTest.csproj", "{52393DB5-A781-463B-A319-DFAA52A9B668}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTrayApp", "SystemTrayApp\SystemTrayApp.csproj", "{9798FFE3-A100-479A-8246-D5322355901F}"
 EndProject

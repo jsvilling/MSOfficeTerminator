@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeKiller.Killers.OfficeApplicationKiller
+namespace OfficeTerminator.Terminators.OfficeApplicationTerminator
 {
-    public class PowerpointKiller : OfficeApplicationKiller<Application>
+    public class PowerpointTerminator : OfficeApplicationTerminator<Application>
     {
         public override string InstanceName => "PowerPoint.Application";
 

@@ -1,28 +1,28 @@
-﻿using OfficeKiller.App;
-using OfficeKiller.Killers.OfficeApplicationKiller;
+﻿using OfficeTerminator.App;
+using OfficeTerminator.Terminators.OfficeApplicationTerminator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeKiller.Killers
+namespace OfficeTerminator.Terminators
 {
-    public class OfficeKillerApp : IOfficeKillerApp
+    public class OfficeTerminator : IOfficeTerminator
     {
         public event ExecutionDoneHandler ExecutionDone;
 
-        public void KillAll()
+        public void TerminateAll()
         {
             try
             {
                 Properties.Settings.Default.Reload();
-                var interfaceType = typeof(IOfficeApplicationKiller);
+                var interfaceType = typeof(IOfficeApplicationTerminator);
                 AppDomain.CurrentDomain.GetAssemblies()
                     .SelectMany(x => x.GetTypes())
                     .Where(x => interfaceType.IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
                     .Select(x => Activator.CreateInstance(x)).ToList()
-                    .ForEach(o => o.GetType().GetMethod("Kill").Invoke(o, null));
+                    .ForEach(o => o.GetType().GetMethod("Terminate").Invoke(o, null));
                 ExecutionDone("All office applications were terminated.");
             }
             catch (Exception e)
@@ -37,9 +37,9 @@ namespace OfficeKiller.Killers
             {
                 Properties.Settings.Default.SaveFiles = itemValue;
             }
-            else if (itemName == "Kill remaining processes")
+            else if (itemName == "Terminate remaining processes")
             {
-                Properties.Settings.Default.KillProcess = itemValue;
+                Properties.Settings.Default.TerminateProcess = itemValue;
             }
             Properties.Settings.Default.Save();
         }
@@ -48,7 +48,7 @@ namespace OfficeKiller.Killers
         {
             Dictionary<string, bool> config = new Dictionary<string, bool>();
             config.Add("Save files", Properties.Settings.Default.SaveFiles);
-            config.Add("Kill remaining processes", Properties.Settings.Default.KillProcess);
+            config.Add("Terminate remaining processes", Properties.Settings.Default.TerminateProcess);
             return config;
         }
     }

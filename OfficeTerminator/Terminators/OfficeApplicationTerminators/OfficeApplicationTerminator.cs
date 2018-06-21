@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OfficeKiller.Killers.OfficeApplicationKiller
+namespace OfficeTerminator.Terminators.OfficeApplicationTerminator
 {
-    public abstract class OfficeApplicationKiller<A> : IOfficeApplicationKiller
+    public abstract class OfficeApplicationTerminator<A> : IOfficeApplicationTerminator
     {
         public abstract string InstanceName
         {
@@ -20,16 +20,16 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
             get;
         }
 
-        public void Kill()
+        public void Terminate()
         {
             if (Properties.Settings.Default.SaveFiles)
             {
                 SaveAndQuitRunningApplications();
             }
 
-            if (Properties.Settings.Default.KillProcess)
+            if (Properties.Settings.Default.TerminateProcess)
             {
-                KillRemainingProcesses();
+                TerminateRemainingProcesses();
             }
         }
 
@@ -54,7 +54,7 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
             }
         }
 
-        private void KillRemainingProcesses()
+        private void TerminateRemainingProcesses()
         {
             Process.GetProcessesByName(ProcessName).ToList().ForEach(p => p.Kill());
         }
