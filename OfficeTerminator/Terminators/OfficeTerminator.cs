@@ -17,18 +17,22 @@ namespace OfficeTerminator.Terminators
             try
             {
                 Properties.Settings.Default.Reload();
-                var interfaceType = typeof(IOfficeApplicationTerminator);
-                AppDomain.CurrentDomain.GetAssemblies()
-                    .SelectMany(x => x.GetTypes())
-                    .Where(x => interfaceType.IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
-                    .Select(x => Activator.CreateInstance(x)).ToList()
-                    .ForEach(o => o.GetType().GetMethod("Terminate").Invoke(o, null));
+                GetTerminators().ForEach(t => t.Terminate());
                 ExecutionDone("All office applications were terminated.");
             }
             catch (Exception e)
             {
                 ExecutionDone("An error occured: " + e.ToString());
             }
+        }
+
+        private List<IOfficeApplicationTerminator> GetTerminators()
+        {
+            var interfaceType = typeof(IOfficeApplicationTerminator);
+            return AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(x => x.GetTypes())
+                .Where(x => interfaceType.IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
+                .Select(x => Activator.CreateInstance(x) as IOfficeApplicationTerminator).ToList();
         }
 
         public void ChangeConfig(string itemName, bool itemValue)
