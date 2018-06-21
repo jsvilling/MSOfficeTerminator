@@ -19,7 +19,7 @@ namespace SystemTrayApp
 
         public CustomApplicationContext(IOfficeTerminator handler)
         {
-            this.handler = new OfficeTerminator.Terminators.OfficeTerminator();
+            this.handler = handler;
             handler.ExecutionDone += OnExecutionDone;
             OnConfigChanged += handler.ChangeConfig;
             InitializeContext();
