@@ -22,8 +22,15 @@ namespace OfficeKiller.Killers.OfficeApplicationKiller
 
         public void Kill()
         {
-            SaveAndQuitRunningApplications();
-            KillRemainingProcesses();
+            if (Properties.Settings.Default.SaveFiles)
+            {
+                SaveAndQuitRunningApplications();
+            }
+
+            if (Properties.Settings.Default.KillProcess)
+            {
+                KillRemainingProcesses();
+            }
         }
 
         public A FindRunningInstance()
