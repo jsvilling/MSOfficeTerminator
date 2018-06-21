@@ -16,7 +16,6 @@ namespace SystemTrayApp
         private IOfficeKillerApp handler;
         private System.ComponentModel.IContainer components;
         private NotifyIcon notifyIcon;
-        private static readonly string DefaultTooltip = "";
 
         public CustomApplicationContext(IOfficeKillerApp handler)
         {
@@ -38,10 +37,9 @@ namespace SystemTrayApp
             {
                 ContextMenuStrip = new ContextMenuStrip(),
                 Icon = Properties.Resources.TrayIcon,
-                Text = DefaultTooltip,
+                Text = "Terminate all office programs",
                 Visible = true
             };
-            notifyIcon.Text = "Terminate all office programs";
             notifyIcon.ContextMenuStrip.Items.Add(SetupConfigSubMenu());
             notifyIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
             notifyIcon.ContextMenuStrip.Items.Add(ToolStripMenuItemWithHandler("Terminate all office programs", OnTerminateAllOfficeApps));
