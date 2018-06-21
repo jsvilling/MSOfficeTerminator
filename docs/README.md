@@ -6,4 +6,4 @@ OfficeKiller is a small application written in C#. The application can be used t
 
 ## Usage
 
-Download the .exe and execute it. This will start the application and display an icon in the system tray. To trigger the termination process you can eiter double click the icon or right click on the icon and choose "Terminate all office programs". To exit the application right click the system tray icon and choose "Exit".
+Build the .exe and execute it. This will start the application and display an icon in the system tray. To trigger the termination process you can eiter double click the icon or right click on the icon and choose "Terminate all office programs". To exit the application right click the system tray icon and choose "Exit".
