@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using OfficeKiller.Killers;
+using System.Collections.Generic;
 
 namespace SystemTrayApp
 {
@@ -18,10 +19,10 @@ namespace SystemTrayApp
 
         public CustomApplicationContext()
         {
-            InitializeContext();
             handler = new OfficeAppHandler();
             handler.ExecutionDone += OnExecutionDone;
             OnConfigChanged += handler.ChangeConfig;
+            InitializeContext();
         }
 
         private void InitializeContext()
@@ -52,16 +53,14 @@ namespace SystemTrayApp
         private ToolStripMenuItem SetupConfigSubMenu()
         {
             ToolStripMenuItem menuItem = new ToolStripMenuItem("Configuration");
-            ToolStripMenuItem saveItem = ToolStripMenuItemWithHandler("Save files", OnClickConfigItem);
-            ToolStripMenuItem killRemainingItem = ToolStripMenuItemWithHandler("Kill remaining processes", OnClickConfigItem);
-            saveItem.Name = "save";
-            saveItem.CheckOnClick = true;
-            saveItem.Checked = true;
-            killRemainingItem.Checked = true;
-            killRemainingItem.CheckOnClick = true;
-            killRemainingItem.Name = "killProcess";
-            menuItem.DropDownItems.Add(saveItem);
-            menuItem.DropDownItems.Add(killRemainingItem);
+            foreach (KeyValuePair<string, bool> configItem in handler.GetConfig())
+            {
+                ToolStripMenuItem item = ToolStripMenuItemWithHandler(configItem.Key, OnClickConfigItem);
+                item.Name = configItem.Key;
+                item.Checked = configItem.Value;
+                item.CheckOnClick = true;
+                menuItem.DropDownItems.Add(item);
+            }
             return menuItem;
         }
 
@@ -83,7 +82,6 @@ namespace SystemTrayApp
                 mi.Invoke(notifyIcon, null);
             }
         }
-
 
         // Event Handlers
 

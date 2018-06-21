@@ -38,14 +38,23 @@ namespace OfficeKiller.Killers
 
         public void ChangeConfig(string itemName, bool itemValue)
         {
-            if (itemName == "save")
+            if (itemName == "Save files")
             {
                 Properties.Settings.Default.SaveFiles = itemValue;
             }
-            else if (itemName == "killProcess")
+            else if (itemName == "Kill remaining processes")
             {
                 Properties.Settings.Default.KillProcess = itemValue;
             }
+            Properties.Settings.Default.Save();
+        }
+
+        public Dictionary<string, bool> GetConfig()
+        {
+            Dictionary<string, bool> config = new Dictionary<string, bool>();
+            config.Add("Save files", Properties.Settings.Default.SaveFiles);
+            config.Add("Kill remaining processes", Properties.Settings.Default.KillProcess);
+            return config;
         }
     }
 }
