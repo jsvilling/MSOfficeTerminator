@@ -20,7 +20,7 @@ namespace SystemTrayApp
         public CustomApplicationContext(IOfficeTerminator officeTerminator)
         {
             this.officeTerminator = officeTerminator;
-            officeTerminator.ExecutionDone += OnExecutionDone;
+            officeTerminator.AllExecutionDone += OnExecutionDone;
             OnConfigChanged += officeTerminator.ChangeConfig;
             InitializeContext();
         }

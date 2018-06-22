@@ -4,25 +4,56 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OfficeTerminator.Terminators
 {
     public class OfficeTerminator : IOfficeTerminator
     {
-        public event ExecutionDoneHandler ExecutionDone;
+        public event ExecutionDoneHandler AllExecutionDone;
+        private int count = 0;
 
         public void TerminateAll()
         {
             try
             {
                 Properties.Settings.Default.Reload();
-                GetTerminators().ForEach(t => t.Terminate());
-                ExecutionDone("All office applications were terminated.");
+                foreach (IOfficeApplicationTerminator terminator in GetTerminators())
+                {
+                    count++;
+                    ThreadWorker tw = new ThreadWorker(terminator);
+                    tw.TerminatorDone += OnTerminatorDone;
+                    new Thread(tw.Run).Start();
+                }
             }
             catch (Exception e)
             {
-                ExecutionDone("An error occured: " + e.ToString());
+                AllExecutionDone("An error occured: " + e.ToString());
+            }
+        }
+
+        private void OnTerminatorDone(object sender, EventArgs e)
+        {
+            if (count-- == 1)
+            {
+                AllExecutionDone("All office applications were terminated.");
+            }
+        }
+
+        class ThreadWorker
+        {
+            public event EventHandler TerminatorDone;
+            private IOfficeApplicationTerminator terminator;
+            public ThreadWorker(IOfficeApplicationTerminator terminator)
+            {
+                this.terminator = terminator;
+            }
+
+            public void Run()
+            {
+                terminator.Terminate();
+                TerminatorDone(this, EventArgs.Empty);
             }
         }
 

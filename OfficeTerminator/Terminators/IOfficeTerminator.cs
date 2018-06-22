@@ -10,7 +10,7 @@ namespace OfficeTerminator.App
 
     public interface IOfficeTerminator
     {
-        event ExecutionDoneHandler ExecutionDone;
+        event ExecutionDoneHandler AllExecutionDone;
 
         void TerminateAll();
 

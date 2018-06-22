@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Configuration\AppConfig.cs" />
     <Compile Include="Terminators\IOfficeTerminator.cs" />
     <Compile Include="Terminators\OfficeTerminator.cs" />
     <Compile Include="Terminators\OfficeApplicationTerminators\Impl\ExcelTerminator.cs" />
@@ -114,8 +115,6 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
